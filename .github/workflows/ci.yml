@@ -1,0 +1,34 @@
+name: Go CI
+
+# Triggers:
+on:
+  push:
+    branches: ["main", "dev"]
+  pull_request:
+    branches: ["main", "dev"]
+
+# Jobs to need execute:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check repository's code into the runner
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up the Go
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24.3'
+
+      # Step 3: Run all tests in the project
+      - name: Run tests
+        run: go test -v ./...
+
+      # Step 4: Install and run the linter
+      - name: Run linter
+        uses: golangci/golangci-lint-action@v6
+        with:
+          version: latest
