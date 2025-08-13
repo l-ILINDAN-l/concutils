@@ -12,6 +12,13 @@ type OrCombiner struct {
 // NewOrCombiner creates and starts an OrCombiner.
 // The output channel closes as soon as any of the input channels close.
 func NewOrCombiner(channels ...<-chan any) *OrCombiner {
+	switch len(channels) {
+	case 0:
+		return &OrCombiner{}
+	case 1:
+		return &OrCombiner{out: channels[0]}
+	}
+
 	out := make(chan any)
 	var once sync.Once
 
