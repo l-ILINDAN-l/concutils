@@ -8,7 +8,7 @@ import (
 	"time"
 
 	// Use the correct import path for your package.
-	"github.com/l-ILINDAN-l/concutils"
+	"github.com/ilindan-dev/concutils"
 )
 
 func main() {
