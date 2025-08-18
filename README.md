@@ -19,7 +19,7 @@ This library is designed to make concurrent code more readable and less error-pr
 ## Installation
 
 ```sh
-go get github.com/l-ILINDAN-l/concutils
+go get github.com/ilindan-dev/concutils
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ package main
 
 import (
     "fmt"
-    "github.com/l-ILINDAN-l/concutils"
+    "github.com/ilindan-dev/concutils"
     "time"
 )
 
@@ -67,7 +67,7 @@ package main
 
 import (
     "fmt"
-    "github.com/l-ILINDAN-l/concutils"
+    "github.com/ilindan-dev/concutils"
     "time"
 )
 
@@ -103,7 +103,7 @@ package main
 
 import (
     "fmt"
-    "github.com/l-ILINDAN-l/concutils"
+    "github.com/ilindan-dev/concutils"
     "sync/atomic"
     "time"
 )

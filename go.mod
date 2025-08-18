@@ -1,4 +1,4 @@
-module github.com/l-ILINDAN-l/concutils
+module github.com/ilindan-dev/concutils
 
 go 1.24.3
 
